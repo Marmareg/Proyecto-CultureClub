@@ -1,0 +1,112 @@
+.App {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+	display: flex;
+	/* flex-wrap: wrap; */
+  justify-content: space-between;
+  justify-items: end;
+  margin: 0 auto;
+  background-color: black;
+  color: aqua;
+}
+
+.texto-navbar {
+  grid-template-rows: 1fr 1fr;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.logo-home{
+  display: flex;
+  align-items: flex-start;
+  width: max-content;
+  margin-left: 15px;
+}
+
+.logo-home img {
+  width: 60px;
+  height: 60px;
+}
+
+.logo-home img:hover {
+  background-color: aqua 
+}
+
+/* .nav-link {
+	display: block;
+	padding: 10px 30px;
+	border-radius: 60px;
+	color: black;
+	border: none;
+	background: aqua;
+	cursor: pointer;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 500;
+	transition: .3s ease all;
+} */
+
+.nav-link:hover {
+  background-color: aqua 
+}
+
+.logo-home{
+  display: flex;
+  align-items: center;
+  width: max-content;
+  justify-content: flex-start;
+}
+
+.logo-home img {
+  width: 80px;
+  height: 80px;
+}
+
+.logo-home img:hover {
+  background-color: aqua 
+}
+
+.icono-lupa {
+  height: 50px;
+  align-items: center;
+  width: 50px;
+  margin-top: 10px;
+  margin-right: 5px;
+  margin-left: 300px;
+}
+
+.icono-lupa:hover{
+  background-color: aqua;
+}
+
+.icono-accesibilidad {
+  height: 60px;
+  width: 60px;
+}
+
+.texto-accesibilidad{
+  margin-left: 20px;
+}
+
+.textoCookies{
+  font-size: 0.05em;
+}
+
+.redesSociales{
+  text-align: center;
+  margin: 0 auto;
+  font-family: Helvetica;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  letter-spacing: 5px;
+}
+
+.iconosRRSS{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-evenly;
+  gap: 50px;
+}
