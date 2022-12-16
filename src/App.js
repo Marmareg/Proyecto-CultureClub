@@ -9,6 +9,7 @@ import Footerbs from './components/Footerbs';
 import Rutas from './components/Rutas';
 import Bonos from './components/Bonos';
 import RutasAccesibles from './components/RutasAccesibles';
+import CookiesWeb from 'react-cookie-consent';
 
 const App = () => {
   const [estadoModal5, cambiarEstadoModal5] = useState(true);
@@ -109,7 +110,7 @@ Pero es posible que tenga una mejor experiencia si cambia la configuración de s
           </Contenido>
           </Modal>
          {/* Modal #5 */}
-         <Modal
+         {/* <Modal
           estado={estadoModal5}
           cambiarEstado={cambiarEstadoModal5}
           titulo="Aviso Cookies"
@@ -118,7 +119,7 @@ Pero es posible que tenga una mejor experiencia si cambia la configuración de s
           posicionModal={'center'}
           padding={'20px'}
         >
-          <Contenido>
+           <Contenido>
             <div className="textoCookies">
            <h1>Aviso de Cookies</h1>
 		<p>Una cookie es un fichero que se descarga en su ordenador al acceder a determinadas páginas web. Las cookies permiten a una página web, entre otras cosas, almacenar y recuperar información sobre los hábitos de navegación de un usuario o de su equipo y, dependiendo de la información que contengan y de la forma en que utilice su equipo, pueden utilizarse para reconocer al usuario.</p>
@@ -127,8 +128,8 @@ Pero es posible que tenga una mejor experiencia si cambia la configuración de s
 		<p>Si tiene cualquier duda acerca de nuestra política de cookies, puede contactar con esta página web a través de nuestros canales de Contacto.</p>
             </div>
             <Boton onClick={() => cambiarEstadoModal5(!estadoModal5)}>Cerrar</Boton> 
-          </Contenido>
-        </Modal>
+          </Contenido> 
+        </Modal> */}
     </div>
       <Hero />
       <Rutas/> 
@@ -150,6 +151,18 @@ Pero es posible que tenga una mejor experiencia si cambia la configuración de s
         </a>
         </div>
       </div>
+      <CookiesWeb 
+      debug={true}
+      style={{ backgroundColor: '#000'}}
+      buttonStyle ={{color:'#000', backgroundColor:'yellow'}}
+      buttonText ='Acepto'
+      >
+      <h3>Aviso de Cookies</h3>
+		<p>Utilizamos cookies propias y de terceros para fines analíticos y mostrarle publicidad relacionada con sus preferencias,
+       en base a un perfil elaborado a partir de su hábitos de navegación (por ejemplo, sitios web visitados).
+       <a href='/privacy'>Consulte nuestra política de cookies</a>.
+    </p>
+         </CookiesWeb>
       <Footerbs />
     </div>
   );
